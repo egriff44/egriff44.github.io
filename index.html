@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Spice Up Your Life</title>
+	<title>Comic Adventures</title>
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 	<style>
 		* {
@@ -13,11 +13,11 @@
 			font-family: 'Poppins', sans-serif;
 		}
 		body {
-			background: #F7F7F7;
+			background: #EDEDED;
 			color: #333;
 		}
 		.header {
-			background: #333;
+			background: #E9A4AB;
 			color: #fff;
 			padding: 20px;
 			text-align: center;
@@ -34,7 +34,7 @@
 		}
 		.button {
 			display: inline-block;
-			background: #E84C3D;
+			background: #FBDB5E;
 			color: #fff;
 			padding: 12px 24px;
 			border-radius: 4px;
@@ -43,7 +43,7 @@
 			transition: background 0.3s ease;
 		}
 		.button:hover {
-			background: #C4372A;
+			background: #F799B4;
 		}
 		.image-container {
 			display: flex;
@@ -54,20 +54,33 @@
 		.image {
 			max-width: 100%;
 			margin: 50px 0;
+			filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
+			animation: pulse 5s ease-in-out infinite alternate;
+		}
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.2);
+			}
+			100% {
+				transform: scale(1);
+			}
 		}
 	</style>
 </head>
 <body>
 	<header class="header">
-		<h1>Spice Up Your Life</h1>
-		<p>Experience the world of spices like never before</p>
-		<a href="#" class="button">Discover Now</a>
+		<h1>Comic Adventures</h1>
+		<p>Join us on a journey through the multiverse</p>
+		<a href="#" class="button">Start Your Adventure</a>
 	</header>
 	<main>
 		<div class="image-container">
-			<img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Spice Image" class="image">
-			<p>Our carefully curated collection of spices will take your taste buds on a journey you won't forget. From the exotic flavors of the East to the bold spices of the West, we've got it all.</p>
-			<a href="#" class="button">Shop Now</a>
+			<img src="https://images.unsplash.com/photo-1519476488048-a141ea0b0cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Comic Image" class="image">
+			<p>Get ready for a wild ride through alternate dimensions and parallel universes. Meet new characters, fight epic battles, and explore strange new worlds. With Comic Adventures, the possibilities are endless.</p>
+			<a href="#" class="button">Join the Adventure</a>
 		</div>
 	</main>
 </body>
