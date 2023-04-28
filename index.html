@@ -1,37 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to my website!</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <h2>About Me</h2>
-        <p>Insert your introduction here.</p>
-      </section>
-      <section>
-        <h2>Latest News</h2>
-        <ul>
-          <li><a href="#">News item 1</a></li>
-          <li><a href="#">News item 2</a></li>
-          <li><a href="#">News item 3</a></li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2023 My Website. All rights reserved.</p>
-    </footer>
-  </body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spice Up Your Life</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+		body {
+			background: #F7F7F7;
+			color: #333;
+		}
+		.header {
+			background: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			font-size: 50px;
+			margin: 0;
+			line-height: 1.2;
+		}
+		p {
+			font-size: 20px;
+			margin: 20px 0;
+			line-height: 1.5;
+		}
+		.button {
+			display: inline-block;
+			background: #E84C3D;
+			color: #fff;
+			padding: 12px 24px;
+			border-radius: 4px;
+			font-size: 20px;
+			text-decoration: none;
+			transition: background 0.3s ease;
+		}
+		.button:hover {
+			background: #C4372A;
+		}
+		.image-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		.image {
+			max-width: 100%;
+			margin: 50px 0;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<h1>Spice Up Your Life</h1>
+		<p>Experience the world of spices like never before</p>
+		<a href="#" class="button">Discover Now</a>
+	</header>
+	<main>
+		<div class="image-container">
+			<img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Spice Image" class="image">
+			<p>Our carefully curated collection of spices will take your taste buds on a journey you won't forget. From the exotic flavors of the East to the bold spices of the West, we've got it all.</p>
+			<a href="#" class="button">Shop Now</a>
+		</div>
+	</main>
+</body>
 </html>
