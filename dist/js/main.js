@@ -52,13 +52,28 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("container3D").appendChild(renderer.domElement);
 
 //Set how far the camera will be from the 3D model
-camera.position.z = objToRender === "dino" ? 25 : 500;
+camera.position.z = objToRender === "disco" ? 25 : 500;
 
 //Add lights to the scene, so we can actually see the 3D model
-const topLight = new THREE.DirectionalLight(0xffffff, 1); // (color, intensity)
+const topLight = new THREE.DirectionalLight(0xAF69EE, 50); // (color, intensity)
 topLight.position.set(500, 500, 500) //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
+
+const topLight2 = new THREE.DirectionalLight(0xffffff, 20); // (color, intensity)
+topLight2.position.set(500, 500, 500) //top-left-ish
+topLight2.castShadow = true;
+scene.add(topLight2);
+
+const botLight = new THREE.DirectionalLight(0xFFA500, 50); // (color, intensity)
+botLight.position.set(-500, -500, 0) //bot-left-ish
+botLight.castShadow = true;
+scene.add(botLight);
+
+const botLight2 = new THREE.DirectionalLight(0x73C2FB, 20); // (color, intensity)
+botLight2.position.set(-100, -100, 0) //bot-left-ish
+botLight2.castShadow = true;
+scene.add(botLight2);
 
 const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "dino" ? 5 : 1);
 scene.add(ambientLight);
@@ -77,7 +92,11 @@ function animate() {
   if (object && objToRender === "disco") {
     //I've played with the constants here until it looked good 
     object.rotation.y = -3 + mouseX / window.innerWidth * 3;
-    object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
+    topLight.rotation.z = -3 + mouseX / window.innerWidth * 3;
+    topLight2.rotation.z = -3 + mouseX / window.innerWidth * 3;
+    botLight.rotation.z = -3 + mouseX / window.innerWidth * 3;
+    botLight2.rotation.z = -3 + mouseX / window.innerWidth * 3;
+    // object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
   }
   renderer.render(scene, camera);
 }
