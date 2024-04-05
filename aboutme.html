@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma Griffiths - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Emma Griffiths - About Me</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,27 +58,55 @@
             text-align: center;
             color: white;
         }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        img {
+            max-width: 25%;
+            max-height:15%;
+            float: left;
+        }
+        
+        .text {
+            font-size: 20px;
+            padding-left: 20px;
+            padding-top: 20%;
+            float: left;
+        }
     </style>
 </head>
 <body>
 
-    <!-- <header>
-        <h1>Emma Griffiths</h1>
-        <p>Welcome to My Personal Website!</p>
-    </header> -->
-
     <nav>
-        <a href="https://egriff44.github.io/">[home]</a>
+        <a href="https://egriff44.github.io/">[HOME]</a>
         <a href="https://egriff44.github.io/resume">[RESUME]</a>
         <a href="#portfolio">[PORTFOLIO]</a>
-        <a href="https://egriff44.github.io/aboutme">[ABOUT ME]</a>
+        <a href="https://egriff44.github.io/aboutme">[about me]</a>
     </nav>
 
-    <!-- <div style="background-image: url(/references/website-homepage.jpg);"> -->
+    <section>
 
-    <div>
-        <img style='height: 100%; width: 100%; object-fit: contain' src="./references/website-homepage-scaled-3.jpg"/>
-    </div>
+        <div class="container">
+            <div class="image">
+              <img src="./references/aboutmepic.png">
+            </div>
+            <div class="text">
+              <h1>ABOUT ME</h1>
+            </div>
+        </div>
+        <div>
+            <p>
+                Hi! :D
+            </p>
+        </div>
+        
+    </section>
+
+    
 
     <footer>
         <p>&copy; 2024 Emma Griffiths</p>
