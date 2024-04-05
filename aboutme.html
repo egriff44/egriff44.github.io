@@ -62,18 +62,19 @@
 
         .container {
             display: grid;
-            align-items: center; 
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 55px;
-            padding-left: 220px;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            grid-auto-rows: minmax(100px, auto);
         }
 
         img {
-            max-width: 100%;
-            max-height:100%;
+            grid-column: 1 / 3;
+            grid-row: 2;
             }
 
         .text {
+            grid-column: 3 / 5;
+            grid-row: 1;
             font-size: 20px;
             color: #898baa;
             background-color: #6b1b06;
@@ -81,8 +82,6 @@
             border-color: #898baa;
             padding-left: 20px;
             padding-right: 20px;
-            max-width: 100%;
-            max-height:100%;
         }
     </style>
 </head>
@@ -97,17 +96,17 @@
 
     <section>
 
-        <center>
-            <div class="container">
-                <div class="image">
-                <img src="./references/aboutmepic.png">
-                </div>
-                <div class="text">
-                    <h1>ABOUT ME</h1>
-                    <p> Hi! :D </p>
-                </div>
+
+        <div class="container">
+            <div class="image">
+            <img src="./references/aboutmepic.png">
             </div>
-        </center>
+            <div class="text">
+                <h1>ABOUT ME</h1>
+                <p> Hi! :D </p>
+            </div>
+        </div>
+
         
     </section>
 
