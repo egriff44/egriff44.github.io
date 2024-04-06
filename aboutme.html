@@ -81,6 +81,26 @@
             border: 10px solid;
             border-color: #898baa;
         }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-item-left {
+            flex: 50%;
+        }
+
+        .flex-item-right {
+            flex: 50%;
+        }
+
+        /* Responsive layout - makes a one column layout instead of a two-column layout */
+        @media (max-width: 800px) {
+            .flex-item-right, .flex-item-left {
+                flex: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -95,11 +115,11 @@
     <section>
 
 
-        <div class="container">
-            <div class="image">
-            <img src="./references/aboutmepic.png">
+        <div class="flex-container">
+            <div class="flex-item-left">
+                <img src="./references/aboutmepic.png">
             </div>
-            <div class="text">
+            <div class="flex-item-right">
                 <h1>ABOUT ME</h1>
                 <p> Hi! :D </p>
             </div>
