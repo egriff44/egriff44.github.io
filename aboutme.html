@@ -82,30 +82,36 @@
             border-color: #898baa;
         }
 
-        .flex-container {
+        /* Column container */
+        .row {  
             display: flex;
             flex-wrap: wrap;
         }
 
-        .flex-item-left {
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
             flex: 30%;
+            /* background-color: #f1f1f1; */
+            padding: 20px;
         }
 
-        .flex-item-right {
+        /* Main column */
+        .main {
             flex: 70%;
-            font-size: 20px;
             color: #898baa;
             background-color: #6b1b06;
             border: 10px solid;
             border-color: #898baa;
+            padding: 20px;
         }
 
-        /* Responsive layout - makes a one column layout instead of a two-column layout */
-        @media (max-width: 800px) {
-            .flex-item-right, .flex-item-left {
-                flex: 100%;
+        @media screen and (max-width: 700px) {
+            .row, .navbar {   
+                flex-direction: column;
             }
         }
+
     </style>
 </head>
 <body>
@@ -120,11 +126,11 @@
     <section>
 
 
-        <div class="flex-container">
-            <div class="flex-item-left">
+        <div class="row">
+            <div class="side">
                 <img src="./references/aboutmepic.png">
             </div>
-            <div class="flex-item-right">
+            <div class="main">
                 <h1>ABOUT ME</h1>
                 <p> Hi! :D </p>
             </div>
