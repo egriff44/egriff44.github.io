@@ -110,8 +110,34 @@
             padding: 20px;
         }
 
+        /* Column container */
+        .row2 {  
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side2 {
+            flex: 50%;
+            /* background-color: #f1f1f1; */
+            padding: 20px;
+            background-color: #101010;
+        }
+
+        /* Main column */
+        .main2 {
+            flex: 50%;
+            background-color: #101010;
+            /* color: #898baa;
+            background-color: #6b1b06;
+            border: 10px solid;
+            border-color: #898baa; */
+            padding: 20px;
+        }
+
         @media screen and (max-width: 700px) {
-            .row, .navbar {   
+            .row, .row2 {   
                 flex-direction: column;
             }
         }
@@ -137,7 +163,7 @@
         </div>
         <div class="main">
             <div style="color:#37120e;background-color: #ad7372;border: 6px solid;border-color: #37120e;padding-left: 10px;">
-                <p style="font-size: 12px;">I am an engineer by trade who is very 
+                <p style="font-size: 12px;">I am an engineer by trade who is 
                     <span style="font-size: 12px; background-color: #722131; color: #b39d9d; font-weight: bolder">passionate about the intersection between engineering, technology and art</span>.
                     I am working to pursue a career focused in <span style="font-size: 12px; background-color: #722131; color: #b39d9d; font-weight: bolder">human computer interaction, wearables, sensing, and immersive technology</span>
                     -- especially for assistive technology applications!
@@ -164,23 +190,33 @@
                     This led me to MIT. I graduated in 2021 with a BS in Materials Science and Engineering and a concentration in Chinese. Throughout my time there,
                     I was able to gain and develop skills in not just material science but also in areas such as software and hardware engineering, product design and fabrication,
                     human computer interaction, robotics, and immersive technology! 
-
-                    <!-- <br>
-                    <br>
-                    I am an engineer by trade graduating from MIT in 2021 with a BS in Materials Science and Engineering and a concentration in Chinese. 
-                    I was lucky enough to contribute to numerous research and class projects throughout my time in school that allowed me to develop a multidisciplinary skillset. 
-                    who loves research and new challenges! I am extremely interested in pursuing a career focused on human computer interaction, 
-                    immersive technology, wearables, and assistive technology. I have past experience between MIT and Lockheed Martin Space leading and 
-                    contributing to research and other projects focused on things such as data processing, robotics, augmented reality applications, and 
-                    machine learning. I think this group would be a great fit! I am very interested in being a part of the new horizon of utilizing immersive 
-                    technology for smart, assistive applications. I have prior experience across numerous disciplines including augmented reality, 
-                    data processing, and robotics that would help drive this project forward. I additionally have experience leading research projects 
-                    (including an independent thesis at MIT) and am confident in my ability to strategically plan projects, drive them to the finish line, 
-                    and communicate results and future work. I think I would make a great fit for this role!</p> -->
                 </p>
             </div>
         </div>
     </div>
+    
+    <div class="row2">
+        <div class="side2">
+            <div style="color:#37120e;background-color: #ad7372;border: 6px solid;border-color: #37120e;padding-left: 10px;">
+                <p style="font-size: 12px;">I am an engineer by trade who is 
+                    <span style="font-size: 12px; background-color: #722131; color: #b39d9d; font-weight: bolder">passionate about the intersection between engineering, technology and art</span>.
+                    I am working to pursue a career focused in <span style="font-size: 12px; background-color: #722131; color: #b39d9d; font-weight: bolder">human computer interaction, wearables, sensing, and immersive technology</span>
+                    -- especially for assistive technology applications!
+                </p> 
+
+            </div>
+        </div>
+        <div class="main2">
+            <div style="color:#37120e;background-color: #ad7372;border: 6px solid;border-color: #37120e;padding-left: 10px;">
+                <p style="font-size: 12px;">I am an engineer by trade who is 
+                    <span style="font-size: 12px; background-color: #722131; color: #b39d9d; font-weight: bolder">passionate about the intersection between engineering, technology and art</span>.
+                    I am working to pursue a career focused in <span style="font-size: 12px; background-color: #722131; color: #b39d9d; font-weight: bolder">human computer interaction, wearables, sensing, and immersive technology</span>
+                    -- especially for assistive technology applications!
+                </p> 
+            </div>
+        </div>
+    </div>
+
 
     <footer>
         <p>&copy; 2024 Emma Griffiths</p>
