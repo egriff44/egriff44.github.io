@@ -21,34 +21,6 @@
             color: white;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #000000;
-            /* padding: 10px; */
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0px;
-            right: 0;
-            width: 100%;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 4px;
-            margin: 0 5px;
-            font-size: small;
-            /* position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0px;
-            right: 0;
-            width: 100%; */
-            font-weight: bold;
-        }
-
         section {
             padding: 20px;
         }
@@ -60,53 +32,21 @@
             color: white;
         }
 
-        .leftside {
-            flex: 30%;
-            /* background-color: #101010; */
-            /* padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px; */
+        .column {
+            float: left;
+            width: 50%;
         }
 
-        /* Main column */
-        .middle {
-            flex: 30%;
-            /* background-color: #101010; */
-            /* padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px; */
-        }
-
-        .rightside {
-            flex: 30%;
-            /* background-color: #101010; */
-            /* padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px; */
-        }
-
-        .row {  
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 50px;
-            padding-right: 50px;
-            padding-top: 50px;
+            /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
     </style>
 </head>
 <body>
-
-    <!-- <nav>
-        <a href="https://egriff44.github.io/">[HOME]</a>
-        <a href="https://egriff44.github.io/resume">[RESUME]</a>
-        <a href="https://egriff44.github.io/portfolio">[PORTFOLIO]</a>
-        <a href="https://egriff44.github.io/aboutme">[ABOUT ME]</a>
-    </nav> -->
-
 
     <div style="background-color: #101010;">
         <div style="padding-left: 50px;padding-right: 50px;">
@@ -118,6 +58,7 @@
             <div style="color:#898baa;background-color: #6b1b06;border: 6px solid;border-color: #898baa;max-width: 250px;">
                 <center><h2>description</h2></center>
             </div>
+            <br>
             <p style="color:#8d8f8f;">A grad course at MIT all about digital fabrication and bringing anything you can imagine to life! Makerspaces
                 were utilized heavily to take on weekly design challenges and to incorporate a growing toolkit of fabrication techniques.
                 Final projects utilized all techniques covered! Mine was a self teaching guitar, including a CAD-designed and 
@@ -126,17 +67,47 @@
                 on the fret board, making it easier to learn and to play along.
             </p>
             <br>
-            <div style="color:#645c62;background-color: #8d8f8f;border: 8px solid;border-color: #645c62;max-width: 350px;">
+            <br>
+            <div style="color:#645c62;background-color: #8d8f8f;border: 8px solid;border-color: #645c62;max-width: 250px;">
                 <center><h2>skills used/developed</h2></center>
             </div>
+            <br>
             <p style="color:#8d8f8f;">CAD/CAM/CAE, NC machining, 3-D printing and scanning, molding and casting, composites, laser and waterjet cutting, 
                 PCB design and fabrication; sensors and actuators; mixed-signal instrumentation, embedded processing, 
                 and wired and wireless communications. </p>
             <br>
-            <div style="color:#b39d9d;background-color: #722131;border: 6px solid;border-color: #b39d9d;max-width: 400px;">
-                <center><h2>skills used/developed</h2></center>
+            <br>
+            <div style="color:#b39d9d;background-color: #722131;border: 6px solid;border-color: #b39d9d;max-width: 250px;">
+                <center><h2>documentation</h2></center>
             </div>
-            <p style="color:#8d8f8f;">Follow along <a href="https://fab.cba.mit.edu/classes/863.20/Architecture/people/EmmaGriffiths/index.html">here!</a></p>
+            <p style="color:#8d8f8f;">Follow along with all of my documentation 
+            <a href="https://fab.cba.mit.edu/classes/863.20/Architecture/people/EmmaGriffiths/index.html">here!</a>
+            Some images from my final project are below.
+            </p>
+            <br>
+            <br>
+            <div class="row">
+                <div class="column">
+                    <p style="color:#8d8f8f;">cad model, made in fusion 360</p>
+                    <br>
+                    <center><img style="max-width: 500px;" src="./references/htmaa/htmaa-cad.png"></center>
+                    <br>
+                    <br>
+                    <p style="color:#8d8f8f;">wifi-connected app controlling fret board lights</p>
+                    <br>
+                    <center><img style="max-width: 400px;" src="./references/htmaa/htmaa-app.png"></center>
+                </div>
+                <div class="column">
+                    <p style="color:#8d8f8f;">electronics wired; led circuits made with vinyl cut copper</p>
+                    <br>
+                    <center><img style="max-width: 400px;" src="./references/htmaa/htmaa-wired.png"></center>
+                    <br>
+                    <br>
+                    <p style="color:#8d8f8f;">pcb; utilized esp32 module</p>
+                    <br>
+                    <center><img style="max-width: 500px;" src="./references/htmaa/htmaa-electronics.png"></center>
+                </div>
+            </div>
     
         </div>
     </div>
