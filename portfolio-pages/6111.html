@@ -201,6 +201,39 @@
                 <img src="./references/wire-cutting.jpg" alt="Wire Cutting Module" class="center">
                 <br>
                 <br>
+                <p style="color:#8d8f8f;">
+                    2. Uncovered Button
+                    <br>
+                    This module takes in one 2 bit number, and two 1 bit numbers from the randomizer. The two
+                    bit number assigns the button to a color using a case statement, and one of the 1 bit numbers
+                    is used to assign a color strip under the button to one of two colors. The last 1 bit random
+                    number is used to determine whether the button will be blank or have text (say “Hold”). This
+                    module also takes in the minutes, tens, and ones position of the timer. The instructions to
+                    disarm this module are based on all of the randomized inputs. Depending on the button color,
+                    strip color, and whether the button has text the user must press the pushed_button when there
+                    is a certain number in the timer and release when there is a different number in the timer.
+                    A few always_ff blocks were used to keep track of the times the user pushed/released the
+                    button. Upon reset, a previous_button logic was set to the input pushed_button value. A
+                    counter was used, and once it got to 1_000_000 clock cycles, I checked to see if the
+                    previous_button was 0 and the current pushed_button was 1. If this was true, I stored the
+                    inputted timer’s minutes, tens, and ones as the pushed minutes, tens, ones. I also did this in
+                    reverse (checking if the button was previously 1 and now 0 after 1_000_000 clock cycles) to
+                    store the timer’s values when the button was released. The count to one million was added as
+                    an additional debounce precaution and to ensure that I was actually seeing a transition from
+                    not pushed/pushed/released. There was a different push/release button time
+                    condition for each color/strip/text combination. If the Defuser pushed and released the button
+                    at the correct times according to the rules, then the always_ff will signal that the module was
+                    completed. If the user does not push or release the button at the correct time, then a failed
+                    signal will be raised.
+                </p>
+                <br>
+                <br>
+                <video controls class="center">
+                    <source src="./references/button.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br>
+                <br>
 
                 <center>
                     <object
