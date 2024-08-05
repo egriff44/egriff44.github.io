@@ -163,42 +163,44 @@
             </div>
             <div >
                 <p style="color:#8d8f8f;">
-                Kaboom consists of a series of back-to-back minigames that you must complete to defuse the bomb before time runs out. We aimed to utilize as much built-in FPGA 
-                functionality as we could when designing these minigames, utilizing the FPGA's microphone, temperature sensor, and accelerometer. Our system also utilized a 
-                speaker and VGA to display our game audio and custom graphics. 
-                <br>
-                <br>
-                Block diagram of our system:
-                <br>
-                <img src="state-diagram.jpg" alt="System Block Diagram" class="center">
-                <br>
-                <br>
-                <h2>my implemented minigames</h2>
-                <br>
-                <br>
-                1. Wire Cutting Module
-                <br>
-                This module takes in 6 3 bit numbers from the randomizer, one for the color of each of the 6
-                wires. These three bit numbers are mapped to colors via case statements. The instructions to
-                disarm this module are based on the first wire color and the number of wires of that color. To
-                count the number of wires that were the first color, I wrote a short module that takes in two
-                input colors and returns 1 if they are the same, and 0 otherwise. I then put all the combinations
-                of the first wire and others through this module ((1,2), (1,3), (1,4), (1,5), (1,6)) and added the
-                results + 1 (to account for the first wire). I then used an always_comb to assign the wire that
-                the user needed to cut for each first wire color / number of wires of that color combination. If
-                the defuser cuts the correct wire (flips the correct switch), then an always_ff block will signal
-                that the module was completed, while if the user cuts a wrong wire, the always_ff will signal
-                that the module was failed. If no wires are cut, the module remains in the playable state. The graphics for 
-                this module were based on one wire image, where the wire itself was white. The wire was intentionally made white 
-                so that the module that stored the wire image could take in a wire input color, then check for pixels in the image 
-                that were white and replace them with the needed color in real time. This made it easy to generate wires of multiple random
-                colors without taking up too much BRAM.
-                <br>
-                <br>
-                <img src="wire-cutting.jpg" alt="Wire Cutting Module" class="center">
-                <br>
-                <br>
+                    Kaboom consists of a series of back-to-back minigames that you must complete to defuse the bomb before time runs out. We aimed to utilize as much built-in FPGA 
+                    functionality as we could when designing these minigames, utilizing the FPGA's microphone, temperature sensor, and accelerometer. Our system also utilized a 
+                    speaker and VGA to display our game audio and custom graphics. 
+                    <br>
+                    <br>
+                    Block diagram of our system: 
                 </p>
+                <br>
+                <img src="state-diagram.jpg" alt="System Block Diagram">
+                <br>
+                <br>
+                <p style="color:#8d8f8f;">
+                    <h3>my implemented minigames</h3>
+                    <br>
+                    <br>
+                    1. Wire Cutting Module
+                    <br>
+                    This module takes in 6 3 bit numbers from the randomizer, one for the color of each of the 6
+                    wires. These three bit numbers are mapped to colors via case statements. The instructions to
+                    disarm this module are based on the first wire color and the number of wires of that color. To
+                    count the number of wires that were the first color, I wrote a short module that takes in two
+                    input colors and returns 1 if they are the same, and 0 otherwise. I then put all the combinations
+                    of the first wire and others through this module ((1,2), (1,3), (1,4), (1,5), (1,6)) and added the
+                    results + 1 (to account for the first wire). I then used an always_comb to assign the wire that
+                    the user needed to cut for each first wire color / number of wires of that color combination. If
+                    the defuser cuts the correct wire (flips the correct switch), then an always_ff block will signal
+                    that the module was completed, while if the user cuts a wrong wire, the always_ff will signal
+                    that the module was failed. If no wires are cut, the module remains in the playable state. The graphics for 
+                    this module were based on one wire image, where the wire itself was white. The wire was intentionally made white 
+                    so that the module that stored the wire image could take in a wire input color, then check for pixels in the image 
+                    that were white and replace them with the needed color in real time. This made it easy to generate wires of multiple random
+                    colors without taking up too much BRAM.
+                </p>
+                <br>
+                <br>
+                <img src="wire-cutting.jpg" alt="Wire Cutting Module">
+                <br>
+                <br>
 
                 <center>
                     <object
