@@ -202,7 +202,7 @@
                 <br>
                 <br>
                 <p style="color:#8d8f8f;">
-                    2. Uncovered Button
+                    2. Uncovered Button Module
                     <br>
                     This module takes in one 2 bit number, and two 1 bit numbers from the randomizer. The two
                     bit number assigns the button to a color using a case statement, and one of the 1 bit numbers
@@ -232,6 +232,32 @@
                     <source src="./references/button.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <br>
+                <br>
+                <p style="color:#8d8f8f;">
+                    3. Covered Button/Microphone Module
+                    <br>
+                    The module begins by displaying a glass covered button on the screen and a rectangular color
+                    strip to the right. The user must hold a correct note long enough to shatter the glass and push the
+                    button. The graphics also update when the note is held long enough, showing the covering cracked, and
+                    then gone (all these images created in inkscape and stored in BRAM via COEs). Once the cover is gone, the user
+                    can press the corresponding button on the FPGA to complete the module. The audio was put through an analog-digital 
+                    converter IP (ADC). This measures the microphone output voltage and converts it to a digital signal. This
+                    data was then put through a Fast Fourier Transform IP (FFT) to convert the time-domain signal
+                    into its frequency domain representation so that we could compare the frequency we are receiving most of to the 
+                    needed input frequency to complete the module.
+                </p>
+                <br>
+                <br>
+                <video controls class="center">
+                    <source src="./references/mic-module.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br>
+                <br>
+                <p style="color:#8d8f8f;">
+                    Below you can see the final report for this project!
+                </p>
                 <br>
                 <br>
 
