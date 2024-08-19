@@ -122,74 +122,72 @@
 
     <section style="background-image: url(./references/star-back.jpg);">
 
-        <div style="display: flex; flex-wrap: wrap;">
-            <div class="span">
-                <center>
-                    <h1 style="color: #888bbb;">----<span style="color: #6a1700;"> projects </span>----</h1>
-                </center>
-            </div>
+        <div class="draggable">
+            <a href="./portfolio-pages/htmaa.html">
+                <img style="max-width: 300px;" src="./references/guitar.jpeg">
+            </a>
         </div>
-
-        <div class="row">
-            <div class="leftside">
-                <a href="./portfolio-pages/htmaa.html">
-                    <img style="max-width: 300px;" src="./references/guitar.jpeg" onmouseover="this.src='./references/guitar.jpeg'" onmouseout="this.src='./references/guitar.jpeg'">
-                </a>
-                <!-- <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <a href="./portfolio-pages/htmaa.html">
-                    <img style="max-width: 300px;" src="./references/guitar.jpeg" onmouseover="this.src='./references/guitar.jpeg'" onmouseout="this.src='./references/guitar.jpeg'">
-                </a> -->
-            </div>
-            <div class="middle">
-                <a href="./portfolio-pages/6111.html">
-                    <img style="max-width: 300px;" src="./references/kaboom.jpg" onmouseover="this.src='./references/kaboom.jpg'" onmouseout="this.src='./references/kaboom.jpg'">
-                </a>
-            </div>
-            <div class="rightside">
-                <a href="./portfolio-pages/6141.html">
-                    <img style="max-width: 300px;" src="./references/robotics.jpg" onmouseover="this.src='./references/robotics.jpg'" onmouseout="this.src='./references/robotics.jpg'">
-                </a>
-            </div>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap;">
-            <div class="span">
-                <center>
-                    <h1 style="color: #721e2f;">----<span style="color: #8c8f8f;"> research </span>----</h1>
-                </center>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="leftside">
-                <a href="./portfolio-pages/bioelectronics.html">
-                    <img style="max-width: 300px;" src="./references/bioelectronics.jpg" onmouseover="this.src='./references/bioelectronics.jpg'" onmouseout="this.src='./references/bioelectronics.jpg'">
-                </a>
-            </div>
-            <div class="middle">
-                <a href="./portfolio-pages/thesis.html">
-                    <img style="max-width: 300px;" src="./references/thesis.jpg" onmouseover="this.src='./references/thesis.jpg'" onmouseout="this.src='./references/thesis.jpg'">
-                </a>
-            </div>
-            <div class="rightside">
-                <a href="./portfolio-pages/diamondcoatings.html">
-                    <img style="max-width: 300px;" src="./references/diamond.jpg" onmouseover="this.src='./references/diamond.jpg'" onmouseout="this.src='./references/diamond.jpg'">
-                </a>
-            </div>
-        </div>
-
+               
     </section>
-
-
 
     <footer>
         <p>&copy; 2024 Emma Griffiths - Personal Website</p>
     </footer>
 
 </body>
+
+<script>
+        //Make the DIV element draggagle:
+        var offset = 0;
+       var mydivs = document.getElementsByClassName("draggable");
+       for (var i = 0; i < mydivs.length; i++) {
+         dragElement(mydivs[i]);
+       }
+
+       function dragElement(elmnt) {
+         var pos1 = 0,
+           pos2 = 0,
+           pos3 = 0,
+           pos4 = 0;
+         if (elmnt.getElementsByClassName("mydivheader")[0]) {
+           /* if present, the header is where you move the DIV from:*/
+           elmnt.getElementsByClassName(
+             "mydivheader"
+           )[0].onmousedown = dragMouseDown;
+         } else {
+           /* otherwise, move the DIV from anywhere inside the DIV:*/
+           elmnt.onmousedown = dragMouseDown;
+         }
+
+         function dragMouseDown(e) {
+           e = e || window.event;
+           e.preventDefault();
+           // get the mouse cursor position at startup:
+           pos3 = e.clientX;
+           pos4 = e.clientY;
+           document.onmouseup = closeDragElement;
+           // call a function whenever the cursor moves:
+           document.onmousemove = elementDrag;
+         }
+
+         function elementDrag(e) {
+           e = e || window.event;
+           e.preventDefault();
+           // calculate the new cursor position:
+           pos1 = pos3 - e.clientX;
+           pos2 = pos4 - e.clientY;
+           pos3 = e.clientX;
+           pos4 = e.clientY;
+           // set the element's new position:
+           elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+           elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+         }
+
+         function closeDragElement() {
+           /* stop moving when mouse button is released:*/
+           document.onmouseup = null;
+           document.onmousemove = null;
+         }
+       }
+</script>
 </html>
