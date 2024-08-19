@@ -175,16 +175,18 @@
                 Challenges:
                 <br>
                 <br>
-                1. Wall following
-                <br>
-                The first challenge was to individually implement a robust wall-following autonomous controller using a 2D racecar's LIDAR data. The racecar should drive 
-                forward while maintaining a constant distance from the wall (either to the left or right of the car). We then worked in teams to implement this 
-                on a 3D car simulator with realistic physics simulation. A combination of RANSAC, PID, and turn detection was used to implement the wall follower in 3D.
-                The RANSAC algorithm can take in the LIDAR data and determine the optimal fitting line that would represent the 'wall' (robust to outliers). The distance 
-                between the car and wall can then be estimated using this drawn line and the error between the car's estimated distance from the wall and desired distance can be 
-                fed into a PID controller to alter the car's steering. The LIDAR data can also be broken into different sections to identify upcoming turns and slow the car appropriately.
-                <br>
-                <br>
+                <p style="color:#8d8f8f;">
+                    1. Wall following
+                    <br>
+                    The first challenge was to individually implement a robust wall-following autonomous controller using a 2D racecar's LIDAR data. The racecar should drive 
+                    forward while maintaining a constant distance from the wall (either to the left or right of the car). We then worked in teams to implement this 
+                    on a 3D car simulator with realistic physics simulation. A combination of RANSAC, PID, and turn detection was used to implement the wall follower in 3D.
+                    The RANSAC algorithm can take in the LIDAR data and determine the optimal fitting line that would represent the 'wall' (robust to outliers). The distance 
+                    between the car and wall can then be estimated using this drawn line and the error between the car's estimated distance from the wall and desired distance can be 
+                    fed into a PID controller to alter the car's steering. The LIDAR data can also be broken into different sections to identify upcoming turns and slow the car appropriately.
+                    <br>
+                    <br>
+                </p>
                 <center>
                     <object
                             type="application/pdf"
