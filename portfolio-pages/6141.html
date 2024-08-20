@@ -285,9 +285,32 @@
                     <source src="./references/racecar - VMware Workstation 2021-04-27 22-34-03_Trim.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-
-
-                <!-- <center>
+                <br>
+                <br>
+                <p style="color:#8d8f8f;">
+                    5. Final Challenge: Race and Obstacle Avoidance
+                    <br>
+                    <br>
+                    Our final challenge was broken into two parts. The first was to finish a lap on a race track as quickly as possible with 
+                    no collisions. This was be done by designing the final race trajectory ourselves, using the TESSE car’s ground truth localization, and using
+                    Pure Pursuit path following. The second part was fast obstacle avoidance. We had to reach the end of an obstructed road
+                    while minimizing collisions and maximizing speed. This was done utilizing LIDAR to detect the obstacles, 
+                    path planning around the obstacles, and tracking collisions. I focused on the race track lap.
+                    We successfully completed a lap around Windridge city in under about 49 seconds with no collisions. 
+                    Our solution was further optimized using path-segment-dependent variable look ahead distances 
+                    and velocities (for Pure Pursuit). On straightaways, the look ahead distance was much larger to minimize 
+                    oscillations and was decreased during turns. Our velocity controller increased 
+                    speed as the car started a segment, reaching a maximum in the middle of the segment, and reduced 
+                    velocity towards segment ends. Our final race track performance is shown below as well as write-ups for the 
+                    final challenge.
+                    <br>
+                    <br>
+                </p>
+                <video controls class="center">
+                    <source src="./references/16-141-spring 2021-05-19 01-46-23 (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <center>
                     <object
                             type="application/pdf"
                             data="./references/Team 11 Final Challenge.pdf" 
@@ -304,7 +327,7 @@
                             width="600"
                             height="700"> 
                     </object>
-                </center> -->
+                </center>
             </div>
         </div>
     </div>
