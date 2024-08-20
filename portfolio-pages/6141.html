@@ -233,13 +233,61 @@
                     <br>
                     Localization is a key problem that must be solved when dealing with self-driving vehicles. 
                     Localization allows the car/robot to know where it is physically within a known area or region. 
-                    This may be by 
+                    Our overall solution to this problem is shown below:
                     <br>
                     <br>
                 </p>
+                <img src="./references/localization-solution.png" alt="Localization Solution" class="center">
+                <br>
+                <br>
+                <p style="color:#8d8f8f;">
+                    <br>
+                    <br>
+                    Monte Carlo Localization was used to solve the problem of localization. 
+                    A large number of particles represents possible positions of the robot. As the robot moves,
+                    it's odometry information is used to propagate the particles accordingly (motion model). Then, 
+                    sensor (LIDAR) data is used to compute the probability of each particle being representative of the 
+                    robot's true location. I worked on implementing the vehicle's motion model. The
+                    odometry data was calculated by integrating control and proprioceptive measure-
+                    ments to estimate current pose given a known starting pose. More specifically,
+                    this was done using the wheel odometry coming from dead-reckoning integration
+                    of motor and steering commands. Because there are numerous factors that can
+                    contribute to uncertainty in robot perception (wheel slip, gear backlash, mea-
+                    surement noise, sensor or processor errors, and more), this uncertainty needs to
+                    be included in our motion model. Random Gaussian noise was added to both
+                    the odometry data as well as the particle poses directly to ensure that the particles will spread. 
+                    Below shows our localization implementation’s estimated pose as compared to
+                    the ground truth pose and the TA solution with odometry noise.
+                    <br>
+                    <br>
+                </p>
+                <img src="./references/localization-result.png" alt="Localization Solution Result" class="center">
+                <br>
+                <br>
+                <p style="color:#8d8f8f;">
+                    4. Path Planning and Pure Pursuit
+                    <br>
+                    <br>
+                    The goal for path planning was to quickly identify a trajectory (as direct as possible) between two points while 
+                    avoiding walls and obstacles. The Pure Pursuit controller for actually controling the movement of the car 
+                    needed to keep it on the planned path. I focused on the Pure Pursuit controller. To implement Pure Pursuit, 
+                    a reference point is first chosen on the desired trajectory a predefined
+                    look ahead distance from the car. Then, a steering angle and velocity are
+                    determined so that the car would hit the chosen reference point if the angle was kept constant. Below you 
+                    can see the results of our path planning and Pure Pursuit controller. The starting point for the 
+                    planned path for the final 2D implementation is shown in green while the end point is shown in red. The planned path is in white 
+                    and the orange point marks the location of the car as it followed the path under
+                    Pure Pursuit control.
+                    <br>
+                    <br>
+                </p>
+                <video controls class="center">
+                    <source src="./references/racecar - VMware Workstation 2021-04-27 22-34-03_Trim.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
 
-                <center>
+                <!-- <center>
                     <object
                             type="application/pdf"
                             data="./references/Team 11 Final Challenge.pdf" 
@@ -256,7 +304,7 @@
                             width="600"
                             height="700"> 
                     </object>
-                </center>
+                </center> -->
             </div>
         </div>
     </div>
