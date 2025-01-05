@@ -158,6 +158,37 @@
             <div>
                 <br>
                 <p style="color:#8d8f8f;">
+                    AI models that classify objects in imagery typically produce moderately 
+                    high class confidences for images of classes that were not available in the training, calling 
+                    their self-reported confidence values into question. Using the xView dataset of overhead imagery 
+                    and associated labeled bounding boxes, I trained an object classification model. This model 
+                    was used to predict whether new images are of a known class or unknown (“anomalous”). 
+                    <br>
+                    <br>
+                    I used a CNN-based model consisting of three convolution blocks. Dropout was added to help reduce 
+                    overfitting. The model was written as a class with layers added one at a time to make it easier to grab the 
+                    latent vectors at any point within the model.
+                    <br>
+                    <br>
+                    I used 20 epochs and Adam as the optimizer with Sparse Categorical Crossentropy loss and Sparse Categorical accuracy.
+                    <br>
+                    <br>
+                    To implement anomaly detection, the latent vectors before the output layer of the model during the test step were 
+                    pulled to give an n-dimensional (based on Dense layer size) space representation of each class since we will have an 
+                    n-dimensional labeled point for each test image.
+                    <br>
+                    <br>
+                    The max/min (or X percentile) and median values in each of the n-dimensions were then calculated for each class. 
+                    New images were run through the model to get their latent representation and compared with the max/min/medians for 
+                    each class in each dimension to predict whether the new image belonged to a known class or was an anomaly.
+                    <br>
+                    <br>
+                    With 20 epochs, the classification model had a 99.08% train accuracy and 86.34% test accuracy. Anomaly detection worked better 
+                    for classes with more examples. Complete anomalies (randomly generated pixelated images) were successfully detected.
+                </p>
+                <br>
+                <br>
+                <p style="color:#8d8f8f;">
                     <center>
                         <object
                                 type="application/pdf"
