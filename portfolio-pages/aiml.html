@@ -167,18 +167,10 @@
                     <br>
                     I used a CNN-based model consisting of three convolution blocks. Dropout was added to help reduce 
                     overfitting. The model was written as a class with layers added one at a time to make it easier to grab the 
-                    latent vectors at any point within the model.
-                    <br>
-                    <br>
-                    I used 20 epochs and Adam as the optimizer with Sparse Categorical Crossentropy loss and Sparse Categorical accuracy.
-                    <br>
-                    <br>
+                    latent vectors at any point within the model. I used 20 epochs and Adam as the optimizer with Sparse Categorical Crossentropy loss and Sparse Categorical accuracy. 
                     To implement anomaly detection, the latent vectors before the output layer of the model during the test step were 
                     pulled to give an n-dimensional (based on Dense layer size) space representation of each class since we will have an 
-                    n-dimensional labeled point for each test image.
-                    <br>
-                    <br>
-                    The max/min (or X percentile) and median values in each of the n-dimensions were then calculated for each class. 
+                    n-dimensional labeled point for each test image. The max/min (or X percentile) and median values in each of the n-dimensions were then calculated for each class. 
                     New images were run through the model to get their latent representation and compared with the max/min/medians for 
                     each class in each dimension to predict whether the new image belonged to a known class or was an anomaly.
                     <br>
