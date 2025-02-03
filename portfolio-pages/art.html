@@ -103,6 +103,13 @@
             width: 50%;
         }
 
+        .center2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+        }
+
         @media screen and (max-width: 700px) {
             .row, .row2 {   
                 flex-direction: column;
@@ -193,7 +200,7 @@
                 </video>
                 <br>
                 <h3 style="color:#6b1b06;">Deck of Cards</h3>
-                <video controls class="center" width="30%">
+                <video controls class="center2">
                     <source src="./references/cards.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -204,17 +211,19 @@
             <div style="color:#b39d9d;background-color: #722131;border: 6px solid;border-color: #b39d9d;max-width: 250px;">
                 <center><h2>still art</h2></center>
             </div>
-            <div>
-                <br>
-                <img src="./references/surr.PNG" alt="Drawing" class="center">
-                <br>
-                <img src="./references/josh.jpg" alt="Drawing" class="center">
-                <br>
-                <img src="./references/cyan.jpg" alt="Drawing" class="center">
-                <br>
-                <img src="./references/bright.jpg" alt="Drawing" class="center">
-                <br>
-                <img src="./references/chick.jpg" alt="Drawing" class="center">
+            <div class="row">
+                <div class="column1">
+                    <img src="./references/surr.PNG" alt="Drawing" class="center2">
+                    <br>
+                    <img src="./references/cyan.PNG" alt="Drawing" class="center2">
+                    <br>
+                    <img src="./references/chick.jpg" alt="Drawing" class="center2">
+                </div>
+                <div class="column2">
+                    <img src="./references/josh.jpg" alt="Drawing" class="center2">
+                    <br>
+                    <img src="./references/bright.jpg" alt="Drawing" class="center2">
+                </div>
             </div>
 
         </div>
